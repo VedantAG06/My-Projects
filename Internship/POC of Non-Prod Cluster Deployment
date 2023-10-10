@@ -74,10 +74,10 @@ sudo mv cdh5.16/ cm5.16/ /var/www/html/
 sudo apt install iftop -y
 sudo iftop
 
-.\pscp.exe -i .\inception.ppk .\inception.txt ubuntu@3.110.147.101:/home/ubuntu
+.\pscp.exe -i .\(key_name).ppk .\inception.txt ubuntu@111-22-33-444:/home/ubuntu
 chmod 400 inception.pem
-ssh -i inception.pem centos@172.31.35.3 
-scp -i inception.pem inception.pem centos@172.31.35.3:/home/centos/
+ssh -i (key_name).pem centos@111-22-33-444 
+scp -i (key_name).pem inception.pem centos@111-22-33-444:/home/centos/
 ________________________________________________________________________
 ###### MYSQL ########
 ************************************************************************
@@ -107,7 +107,7 @@ ______________________________________________________
 ***************
 sudo apt install mysql-client
 sudo yum install mysql
-mysql -h database-1.cdr6elbke7a2.ap-south-1.rds.amazonaws.com -P 3306 -u admin -p
+mysql -h database-1.111-22-33-444.ap-south-1.rds.amazonaws.com -P 3306 -u admin -p
 ______________________________________________________
 
 CREATE DATABASE scm DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; 
@@ -212,7 +212,7 @@ sudo yum makecache
 sudo yum install java -y 
 sudo yum install cloudera-manager-server cloudera-manager-daemons -y 
 
-sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql -h ip-172-31-2-213.ap-south-1.compute.internal scm scm P@ssw0rd
+sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql -h ip-111-22-33-444.ap-south-1.compute.internal scm scm P@ssw0rd
 
 sudo service cloudera-scm-server start
 
