@@ -1,0 +1,12 @@
+# CAPACITY PLANNING :
+# Generated Data Per Day= 150 GB
+# Monthly Data= 150 GB*30 Days= 4500GB= 4.50 TB
+# Yearly Data= 4500 GB*365 Days= 54750 GB= 53.46 TB
+# Replication Factor (RF)= 3
+# Total Data (Including RF)= 54750*3= 164250 GB= 160.40 TB
+# 10 % overhead space needed= 160.40 TB+16.04 TB (10% overhead)= 176.44 TB
+# Total Data (yearly):
+# Data At Rest=  1 TB * 3 (Including RF)=  3 TB
+# Data Including RF= 176.44 TB+3 TB= 179.44 TB = 180 TB
+# 30% non-dfs= 180 TB+54 TB (non-dfs 30%)= 234 TB
+# Final Data= 234 TB
